@@ -18,6 +18,7 @@ const RNG = function() {
 
     return spelerTotal, computerTotal;
 }
+
 //console.log(SD1, SD2, CD1, CD2);
 
 //let name = prompt("Wat is uw naam?");
