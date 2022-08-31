@@ -1,0 +1,18 @@
+#title {
+	height: auto;
+	width: auto;
+	left: 50%;
+	top: 10px;
+	background-color: #ee3;
+	border: 5px dashed #222;
+	margin: auto;
+	text-align: center;
+}
+
+#gokken {
+	border: 2px dotted #3ee
+}
+
+#rollen {
+	border: 1px solid #222;
+}
