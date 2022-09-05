@@ -12,16 +12,33 @@
     <div id="title">
         <h1>WELKOM OP DE DOBBEL GOK PAGINA</h1>
     </div>
-    <div id="gokken">
-		<button onclick="hoger()">Hoger</button>
-        <button onclick="lager()">Lager</button>
-    </div> 
-    <div id="rollen">
-        <button onclick="RNG()">Rol de dobbelstenen</button>
-    </div>
-    <div id="playerRoll">
-        ???
+    
+    <div id="money">
+        <div id="bet">
+            <input type="text" id="currentBet" >
+        </div>
+        <div id="total">
+
+        </div>
     </div>
     
+    <div id="dice">
+        <div id="playerDice">
+
+        </div>
+        <div id="cpuDice" >
+
+        </div>
+    </div>
+
+    <div id="roll">
+        <button onclick="RNG()">Rol de dobbelstenen</button>
+    </div>
+
+    <div id="buttons">
+		<button id="higher" onclick="higher()" disabled>Hoger</button>
+        <button id="lower" onclick="lower()" disabled>Lager</button>
+    </div> 
+        
     <script src="js/main.js"></script>
 </body>

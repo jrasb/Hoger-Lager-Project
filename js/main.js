@@ -19,14 +19,11 @@ const RNG = function() {
     return spelerTotal, computerTotal;
 }
 
-//console.log(SD1, SD2, CD1, CD2);
+function disableElement() {
+    document.getElementById("higher").disabled = true;
+}
 
-//let name = prompt("Wat is uw naam?");
-//let geld = prompt("Hoeveel wilt u gokken?");
-
-//console.log(name, geld);
-
-function hoger() {
+function higher() {
     //console.log("hoger Test")
     if (spelerTotal > computerTotal) {
         console.log("WINNER");
@@ -35,7 +32,7 @@ function hoger() {
 	}
 }
 
-function lager() {
+function lower() {
     //console.log("lager test")
     if (spelerTotal < computerTotal) {
         console.log("WINNER");
