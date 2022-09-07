@@ -9,6 +9,27 @@
 	text-align: center;
 }
 
+#money {	
+	height: 100px;
+	width: 25%;
+	background-color: lightblue;
+	margin: 10px;
+	padding: auto;
+	text-align: left;
+	border: 2px #222 dotted
+}
+
+#currentBet {
+	height: auto;
+	width: auto;
+}
+
+#betButton {
+	height: auto;
+	width: auto;
+	margin-left: 50%;
+}
+
 #roll {
 	margin: 10px;
 	text-align: center;
