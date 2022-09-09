@@ -1,5 +1,6 @@
 let spelerTotal;
 let computerTotal;  
+let bidAmmount = document.getElementsByName("bidAmmount");
 
 const RNG = function() {
     spelerTotal = 0;
@@ -19,14 +20,22 @@ const RNG = function() {
     return spelerTotal, computerTotal;
 }
 
-function disableElement() {
+const buttonEnabler = function() {
+    document.getElementById("higher").disabled = false;
+    document.getElementById("lower").disabled = false;
+    console.log("buttons enabled");
+}
+
+const buttonDisabler = function() {
     document.getElementById("higher").disabled = true;
+    document.getElementsById("lower").disabled = true;
 }
 
 function higher() {
     //console.log("hoger Test")
     if (spelerTotal > computerTotal) {
         console.log("WINNER");
+
     } else {
 		console.log("loser")
 	}
@@ -41,6 +50,8 @@ function lower() {
 	}
 }
 
+/*
 addEventListener("DOMContentLoaded", function() {
 	RNG();
 });
+*/

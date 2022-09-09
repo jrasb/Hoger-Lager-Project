@@ -5,39 +5,42 @@
     <title>Website</title>
     <link rel="icon" type="image/x-image" href="img/icon.png"/>
 	<link href="css/style.css" rel="stylesheet"/>
-
+    <script defer src="js/main.js"></script>
 </head>
 
 <body>
-    <div id="title">
+    <div id="header">
         <h1>WELKOM OP DE DOBBEL GOK PAGINA</h1>
     </div>
-    
     <form>
-        <div>
-            <label for="a">Hoeveel wilt u bieden:</label>
-            <input id="a" type="text">
-            <
+        <div class="box" id="money">
+            <label for="bid">Hoeveel wilt u bieden:</label>
+            <input id="bid" type="text" name="bidAmmount">
+            <button onclick="console.log(bidAmmount)" id="bidButton">Bieden</button>
         </div>
     </form>
     
-    <div id="dice">
+    <div class="box">
         <div id="playerDice">
-
+            <h1>SPELER DOBBELS</h1>
+            <div>
+                
+            </div>
         </div>
-        <div id="cpuDice" >
+        <div id="computerDice">
+            <h1>COMPUTER DOBBELS</h1>
+            <div>
 
+            </div>
         </div>
     </div>
 
     <div id="roll">
-        <button onclick="RNG()">Rol de dobbelstenen</button>
+        <button onclick="RNG();buttonToggler()">Rol de dobbelstenen</button>
     </div>
 
-    <div id="buttons">
-		<button id="higher" onclick="higher()" disabled>Hoger</button>
-        <button id="lower" onclick="lower()" disabled>Lager</button>
-    </div> 
-        
-    <script src="js/main.js"></script>
+    <div class="box">
+		<button id="higher" disabled onclick="higher()">Hoger</button>
+        <button id="lower" disabled onclick="lower()">Lager</button>
+    </div>
 </body>
