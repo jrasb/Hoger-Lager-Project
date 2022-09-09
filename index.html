@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-
+<html>
 <head>
     <meta charset="UTF-8"/>
     <title>Website</title>
@@ -35,12 +35,13 @@
         </div>
     </div>
 
-    <div id="roll">
-        <button onclick="RNG();buttonToggler()">Rol de dobbelstenen</button>
+    <div class="box buttons">
+        <button id="roll" onclick="RNG()">Rol de dobbelstenen</button>
     </div>
 
-    <div class="box">
+    <div class="box buttons" id="guess">
 		<button id="higher" disabled onclick="higher()">Hoger</button>
         <button id="lower" disabled onclick="lower()">Lager</button>
     </div>
 </body>
+</html>

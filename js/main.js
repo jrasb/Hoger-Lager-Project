@@ -17,37 +17,38 @@ const RNG = function() {
 		console.log(spelerTotal, computerTotal);
     }
 
-    return spelerTotal, computerTotal;
+    buttonToggle();
 }
 
-const buttonEnabler = function() {
-    document.getElementById("higher").disabled = false;
-    document.getElementById("lower").disabled = false;
-    console.log("buttons enabled");
+const buttonToggle = function() {
+    document.querySelectorAll(".buttons button").forEach(
+        function(button) {
+            button.disabled = !button.disabled;
+        }
+    );
 }
 
-const buttonDisabler = function() {
-    document.getElementById("higher").disabled = true;
-    document.getElementsById("lower").disabled = true;
-}
-
-function higher() {
-    //console.log("hoger Test")
+const higher = function() {
     if (spelerTotal > computerTotal) {
         console.log("WINNER");
 
     } else {
 		console.log("loser")
 	}
+
+    buttonToggle();
+
 }
 
-function lower() {
+const lower = function() {
     //console.log("lager test")
     if (spelerTotal < computerTotal) {
         console.log("WINNER");
     } else {
 		console.log("loser")
 	}
+
+    buttonToggle();
 }
 
 /*
