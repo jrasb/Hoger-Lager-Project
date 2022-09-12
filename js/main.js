@@ -1,6 +1,7 @@
 let spelerTotal;
 let computerTotal;  
-let bidAmmount = document.getElementsByName("bidAmmount");
+let currentFunds = 0;
+let netGain
 
 const RNG = function() {
     spelerTotal = 0;
@@ -19,6 +20,14 @@ const RNG = function() {
 
     buttonToggle();
 }
+
+const addFunds = function() {
+    console.log("foo");
+    currentFunds += 100;
+    console.log(currentFunds);
+}
+
+
 
 const buttonToggle = function() {
     document.querySelectorAll(".buttons button").forEach(
