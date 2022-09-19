@@ -13,6 +13,7 @@ let playerTotal;
 let computerTotal;
 let playerFunds = 0;
 let houseFunds = 0;
+let playerDice = [], computerDice = [];
 
 //functions here
 const generateRandomNumber = function() {
@@ -38,17 +39,29 @@ const rollDice = function() {
     computerTotal = 0;
 
     while (playerTotal === computerTotal) {
-        let playerDice1 = generateRandomNumber();
-        let playerDice2 = generateRandomNumber();
-        let computerDice1 = generateRandomNumber();
-        let computerDice2 = generateRandomNumber();
+        playerDice = [generateRandomNumber(), generateRandomNumber()]
+        computerDice = [generateRandomNumber(), generateRandomNumber()];
 
-        playerTotal = playerDice1 + playerDice2;
-        computerTotal = computerDice1 + computerDice2;
-        console.log(playerTotal, computerTotal);
+        playerTotal = playerDice[0] + playerDice[1];
+        computerTotal = computerDice[0] + computerDice[1];
+        //console.log(playerTotal, computerTotal);
     }
 
+    document.querySelectorAll(".player-dice > div").forEach(
+        (element, index) => {
+            element.className = "dice-state-" + playerDice[index]; 
+        }
+    )
+
     toggleButton();
+}
+
+const revealDice = function() {
+    document.querySelectorAll(".computer-dice > div").forEach(
+        (element, index) => {
+            element.className = "dice-state-" + computerDice[index]; 
+        }
+    )
 }
 
 const toggleButton = function() {
@@ -71,8 +84,9 @@ const guessHigher = function() {
         house.innerHTML = houseFunds;
     }
     
+    revealDice();
     updateFunds();
-    buttonToggle();
+    toggleButton();
 }
 
 const guessLower = function() {
@@ -86,6 +100,7 @@ const guessLower = function() {
         house.innerHTML = houseFunds;
     }
 
+    revealDice();
     updateFunds();
     toggleButton();
 }

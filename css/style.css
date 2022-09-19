@@ -1,3 +1,7 @@
+*{
+	box-sizing: border-box;
+}
+
 .header {
 	height: auto;
 	width: auto;
@@ -10,13 +14,16 @@
 }
 
 .box {
-	height: 100px;
-	width: auto;
 	background-color: lightblue;
 	margin: 10px;
 	padding: 10px;
 	text-align: center;
 	border: 2px #222 dotted
+}
+
+.dice-box {
+	display: flex;
+	flex-direction: row;
 }
 
 .money, .funds {
@@ -29,12 +36,15 @@
 	text-align: right;
 }
 
+
 .player-dice, .computer-dice {
 	background-color: #f0f0f0;
-	float: left;
 	width: 50%;
 	font-size: x-small;
 	outline: solid 1px #222;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
 }
 
 .player-dice {
@@ -54,3 +64,41 @@
 	width: auto;
 	margin-left: 50%;
 }
+
+.higher, .lower {
+	text-align: center;
+}
+
+.player-dice > div, .computer-dice > div {
+	margin: 0 10px;
+	align-self: center;
+	width: 64px;
+	height: 64px;
+	float: left;
+	background: url(/img/dice.png);
+}
+
+div.dice-state-1 {
+	background-position: -64px 0;
+}
+
+div.dice-state-2 {
+	background-position: -128px 0;
+}
+
+div.dice-state-3 {
+	background-position: -192px 0;
+}
+
+div.dice-state-4 {
+	background-position: -256px 0;
+}
+
+div.dice-state-5 {
+	background-position: -320px 0;
+}
+
+div.dice-state-6 {
+	background-position: -384px 0;
+}
+
