@@ -9,11 +9,9 @@ const higher = document.querySelector(".higher");
 const lower = document.querySelector(".lower");
 
 //let vars here
-let playerTotal;
-let computerTotal;
-let playerFunds = 0;
-let houseFunds = 0;
-let playerDice = [], computerDice = [];
+let playerTotal, computerTotal
+    playerFunds = 0, houseFunds = 0, 
+    playerDice = [], computerDice = [];
 
 //functions here
 const generateRandomNumber = function() {
