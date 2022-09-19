@@ -1,7 +1,7 @@
 console.log("file loaded")
 
 //querySelector const vars here
-const fundsButton = document.querySelector(".fundsButton");
+const fundsButton = document.querySelector(".funds-button");
 const roll = document.querySelector(".roll");
 const currentFunds = document.querySelector(".currentFunds");
 const house = document.querySelector(".house");
