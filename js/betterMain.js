@@ -1,7 +1,9 @@
 console.log("file loaded")
 
 //querySelector const vars here
-const fundsButton = document.querySelector(".funds-button");
+const addFundsButton = document.querySelector(".add-funds");
+const decreaseFundsButton = document.querySelector(".decrease-funds");
+const doubleFundsButton = document.querySelector(".double-funds");
 const roll = document.querySelector(".roll");
 const currentFunds = document.querySelector(".currentFunds");
 const house = document.querySelector(".house");
@@ -24,12 +26,36 @@ const addFunds = function() {
     console.log(playerFunds);
 }
 
+const decreaseFunds = function() {
+    if (playerFunds != 0) {
+        playerFunds -= 100;
+    } else {
+        playerFunds = playerFunds
+    }
+    currentFunds.innerHTML = playerFunds;
+    console.log(playerFunds)
+}
+
+const doubleFunds = function() {
+    playerFunds *= 2;
+    currentFunds.innerHTML = playerFunds;
+    console.log(playerFunds);
+}
+
 const updateFunds = function() {
     playerFunds = 0;
     currentFunds.innerHTML = playerFunds;
     house.innerHTML = houseFunds;
     console.log("player funds: " + playerFunds);
     console.log("win/loss: " + houseFunds);
+}
+
+const hideDice = function() {
+    document.querySelectorAll(".computer-dice > div").forEach(
+        (element) => {
+            element.className = "dice-state-unknown";
+        }
+    );
 }
 
 const rollDice = function() {
@@ -49,8 +75,9 @@ const rollDice = function() {
         (element, index) => {
             element.className = "dice-state-" + playerDice[index]; 
         }
-    )
+    );
 
+    hideDice();
     toggleButton();
 }
 
@@ -59,7 +86,7 @@ const revealDice = function() {
         (element, index) => {
             element.className = "dice-state-" + computerDice[index]; 
         }
-    )
+    );
 }
 
 const toggleButton = function() {
@@ -107,7 +134,9 @@ const guessLower = function() {
 
 updateFunds();
 
-fundsButton.addEventListener("click", addFunds);
+addFundsButton.addEventListener("click", addFunds);
+decreaseFundsButton.addEventListener("click", decreaseFunds);
+doubleFundsButton.addEventListener("click", doubleFunds);
 roll.addEventListener("click", rollDice);
 higher.addEventListener("click", guessHigher);
 lower.addEventListener("click", guessLower);
