@@ -16,19 +16,19 @@ let playerTotal, computerTotal
     playerDice = [], computerDice = [];
 
 //functions here
-const generateRandomNumber = function() {
+const generateRandomNumber = function() {				//generates random number (used for the dice)
     return Math.floor(Math.random() * 6) + 1;
 }
 
-const addFunds = function() {
+const addFunds = function() {							//adds funds to the bet in increments of 100
     playerFunds += 100;
     currentFunds.innerHTML = playerFunds;
     console.log(playerFunds);
 }
 
-const decreaseFunds = function() {
-    if (playerFunds != 0) {
-        playerFunds -= 100;
+const decreaseFunds = function() {						//removes funds from the bet in increments of 100
+    if (playerFunds != 0) { 
+        playerFunds -= 100;								//if-statement makes sure that you can't have a negative betting value
     } else {
         playerFunds = playerFunds
     }
@@ -36,13 +36,13 @@ const decreaseFunds = function() {
     console.log(playerFunds)
 }
 
-const doubleFunds = function() {
+const doubleFunds = function() {						//simple script that doubles current bet
     playerFunds *= 2;
     currentFunds.innerHTML = playerFunds;
     console.log(playerFunds);
 }
 
-const updateFunds = function() {
+const updateFunds = function() {						//updates current bet (needed to return betting value to 0 after the end of the round)
     playerFunds = 0;
     currentFunds.innerHTML = playerFunds;
     house.innerHTML = houseFunds;
@@ -50,7 +50,7 @@ const updateFunds = function() {
     console.log("win/loss: " + houseFunds);
 }
 
-const hideDice = function() {
+const hideDice = function() {							//changes the computer dice sprites to be back to the "unknown state" when the player decides to roll the dice again
     document.querySelectorAll(".computer-dice > div").forEach(
         (element) => {
             element.className = "dice-state-unknown";
@@ -58,11 +58,11 @@ const hideDice = function() {
     );
 }
 
-const rollDice = function() {
+const rollDice = function() {							//function used to "roll" the dice by use of the previous generateRandomNumber func
     playerTotal = 0;
     computerTotal = 0;
 
-    while (playerTotal === computerTotal) {
+    while (playerTotal === computerTotal) {				//while loop functions as a failsafe to make sure that the player and computer cannot have the same total dice value
         playerDice = [generateRandomNumber(), generateRandomNumber()]
         computerDice = [generateRandomNumber(), generateRandomNumber()];
 
@@ -70,7 +70,7 @@ const rollDice = function() {
         computerTotal = computerDice[0] + computerDice[1];
         //console.log(playerTotal, computerTotal);
     }
-
+														//Changes the sprite of the dice based on the number rolled by changing the class of the object
     document.querySelectorAll(".player-dice > div").forEach(
         (element, index) => {
             element.className = "dice-state-" + playerDice[index]; 
@@ -81,7 +81,7 @@ const rollDice = function() {
     toggleButton();
 }
 
-const revealDice = function() {
+const revealDice = function() {							//Changes the sprite of the dice based on the number rolled by changing the class of the object
     document.querySelectorAll(".computer-dice > div").forEach(
         (element, index) => {
             element.className = "dice-state-" + computerDice[index]; 
@@ -89,7 +89,7 @@ const revealDice = function() {
     );
 }
 
-const toggleButton = function() {
+const toggleButton = function() {						//Toggles all buttons to either enabled or disabled causing the player to be unable to change the betting value or the "re-roll" the dice
     document.querySelectorAll("button").forEach(
         function(button) {
             button.disabled = !button.disabled;
@@ -97,7 +97,8 @@ const toggleButton = function() {
     );
 }
 
-const guessHigher = function() {
+
+const guessHigher = function() {						//functions determining whether the player has guessed correctly
     if (playerTotal > computerTotal) {
         console.log("WINNER");
         houseFunds += playerFunds;
