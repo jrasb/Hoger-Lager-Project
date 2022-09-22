@@ -27,8 +27,7 @@
 }
 
 .money, .funds {
-	width: auto;
-	height: 100px;
+	height: auto;
 	padding: 1% 25%;
 }
 
@@ -42,6 +41,7 @@
 	width: 50%;
 	font-size: x-small;
 	outline: solid 1px #222;
+	margin: 5px;
 	display: flex;
 	align-items: center;
 	justify-content: space-evenly;
