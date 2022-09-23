@@ -2,6 +2,24 @@
 	box-sizing: border-box;
 }
 
+body {
+	background-color: #f0f0f0;
+}
+
+#wrapper {
+	padding: 10px 5%;
+}
+
+button {
+	color: #eee;
+	padding: 15px 32px;
+}
+
+button:disabled {
+	background-color: #B2B2B2;
+	border: 2px solid #929292;
+}
+
 .header {
 	height: auto;
 	width: auto;
@@ -54,19 +72,23 @@
 	text-align: right;
 }
 
-.currentBet {
-	height: auto;
-	width: auto;
-}
-
-.betButton {
-	height: auto;
-	width: auto;
-	margin-left: 50%;
-}
-
 .higher, .lower {
 	text-align: center;
+}
+
+.double-funds {
+	background-color: #CF6A32;
+	border: 2px solid #AF4A12;
+}
+
+.higher, .add-funds{
+	background-color: #4D7455;
+	border: 2px solid #3D6445;
+}
+
+.lower, .decrease-funds {
+	background-color: #AA0000;
+	border: 2px solid #890000;
 }
 
 .player-dice > div, .computer-dice > div {
