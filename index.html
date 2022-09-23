@@ -8,41 +8,44 @@
         <script defer src="js/betterMain.js"></script>
     </head>
     <body>
-        <div class="header">
-            <h1>WELCOME ON THE DICE BETTING WEBSITE</h1>
-        </div>
-            <div class="box money">
-                <button class="add-funds">ADD FUNDS</button>
-                <button class="decrease-funds">DECREASE FUNDS</button>
-                <button class="double-funds">DOUBLE BET</button>
-                <div class="player-funds">
-                    Your current funds are: 
-                    <div class="currentFunds"></div>  
+        <div id="wrapper">
+            <div class="header">
+                <h1>WELCOME TO THE DICE BETTING WEBSITE</h1>
+            </div>
+                <div class="box money">
+                    <button class="add-funds">ADD FUNDS</button>
+                    <button class="decrease-funds">DECREASE FUNDS</button>
+                    <button class="double-funds">DOUBLE BET</button>
+                    <div class="player-funds">
+                        Your current funds are: 
+                        <div class="currentFunds"></div>  
+                    </div>
+                    <div class="house-funds">
+                        Your current gain/loss: 
+                        <div class="house"></div>
+                    </div>
                 </div>
-                <div class="house-funds">
-                    Your current gain/loss: 
-                    <div class="house"></div>
+            <div class="box dice-box">
+                <h1>PLAYER DICE</h1>
+                <div class="player-dice">
+                    <div id="player-dice-1" class="dice-state-unknown"></div>
+                    <div id="player-dice-2" class="dice-state-unknown"></div>
+                </div>
+                <h1>COMPUTER DICE</h1>
+                <div class="computer-dice">
+                    <div id="computer-dice-1" class="dice-state-unknown"></div>
+                    <div id="computer-dice-2" class="dice-state-unknown"></div>
                 </div>
             </div>
-        <div class="box dice-box">
-            <h1>PLAYER DICE</h1>
-            <div class="player-dice">
-                <div id="player-dice-1" class="dice-state-unknown"></div>
-                <div id="player-dice-2" class="dice-state-unknown"></div>
+            <div class="box buttons">
+                <button class="roll">ROLL THE DICE</button>
             </div>
-            <h1>COMPUTER DICE</h1>
-            <div class="computer-dice">
-                <div id="computer-dice-1" class="dice-state-unknown"></div>
-                <div id="computer-dice-2" class="dice-state-unknown"></div>
+            <div class="box buttons">
+                <p>GUESS WHETHER YOUR DICE ARE HIGER OR LOWER THAN THE COMPUTER</p>
+    	    	<button class="higher" disabled>HIGHER</button>
+                <button class="lower" disabled>LOWER</button>
             </div>
-        </div>
-        <div class="box buttons">
-            <button class="roll">ROLL THE DICE</button>
-        </div>
-        <div class="box buttons">
-            <p>GUESS WHETHER YOUR DICE ARE HIGER OR LOWER THAN THE COMPUTER</p>
-    		<button class="higher" disabled>HIGHER</button>
-            <button class="lower" disabled>LOWER</button>
+            <div class="box win-loss-screen"></div>
         </div>
     </body>
 </html>

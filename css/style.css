@@ -1,4 +1,4 @@
-*{
+* {
 	box-sizing: border-box;
 }
 
@@ -21,19 +21,16 @@ button:disabled {
 }
 
 .header {
-	height: auto;
-	width: auto;
-	left: 50%;
-	top: 10px;
+	padding: 10px;
 	border: 5px dashed #222;
-	background-color: #ee3;
+	background-color: #d0d030;
 	margin: auto;
 	text-align: center;
 }
 
 .box {
-	background-color: lightblue;
-	margin: 10px;
+	background-color: #666;
+	margin: 10px 0;
 	padding: 10px;
 	text-align: center;
 	border: 2px #222 dotted
@@ -53,7 +50,6 @@ button:disabled {
 	text-align: right;
 }
 
-
 .player-dice, .computer-dice {
 	background-color: #f0f0f0;
 	width: 50%;
@@ -68,6 +64,7 @@ button:disabled {
 .player-dice {
 	text-align: left;
 }
+
 .computer-dice {
 	text-align: right;
 }
@@ -123,4 +120,3 @@ div.dice-state-5 {
 div.dice-state-6 {
 	background-position: -384px 0;
 }
-
