@@ -17,17 +17,26 @@ let playerTotal, computerTotal
     playerDice = [], computerDice = [];
 
 // FUNCTIONS HERE
-// Put these into functions in case these could be used multiple times
+// Put these into functions for easier modification of the loss and win related
+const updateWinLossScreen = function() {
+    winLossScreen.innerHTML = null;
+    winLossScreen.classList.remove("loss-screen", "win-screen")
+}
+
 const losing = function() {
 	console.log("loser")
 	houseFunds -= playerFunds;
     winLossScreen.innerHTML = "YOU LOST"
+    winLossScreen.classList.add("loss-screen");
+    setTimeout(updateWinLossScreen, 3000);
 }
 
 const winning = function() {
 	console.log("WINNER");
 	houseFunds += playerFunds;
     winLossScreen.innerHTML = "YOU WON"
+    winLossScreen.classList.add("win-screen");
+    setTimeout(updateWinLossScreen, 3000);
 }
 
 // Generates random number (used for the dice)
@@ -120,7 +129,7 @@ const toggleButton = function() {
     );
 }
 
-//functions determining whether the player has guessed correctly
+// Functions determining whether the player has guessed correctly
 const guessHigher = function() {
     if (playerTotal > computerTotal) {
 		winning();
@@ -149,7 +158,7 @@ const guessLower = function() {
     toggleButton();
 }
 
-//post func stuff here
+// On site load stuff here
 
 updateFunds();
 

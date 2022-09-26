@@ -13,6 +13,7 @@ body {
 button {
 	color: #eee;
 	padding: 15px 32px;
+	margin: 5px 0;
 }
 
 button:disabled {
@@ -29,7 +30,7 @@ button:disabled {
 }
 
 .box {
-	background-color: #666;
+	background-color: #6592a0;
 	margin: 10px 0;
 	padding: 10px;
 	text-align: center;
@@ -71,6 +72,11 @@ button:disabled {
 
 .higher, .lower {
 	text-align: center;
+}
+
+.roll {
+	background-color: #ffd700;
+	border: 2px solid #dfb700;
 }
 
 .double-funds {
@@ -119,4 +125,25 @@ div.dice-state-5 {
 
 div.dice-state-6 {
 	background-position: -384px 0;
+}
+
+.win-loss-screen {
+	background-color: #f0f0f0;
+	border: none;
+}
+
+.win-screen, .loss-screen {
+	padding: 10px;
+	text-align: center;
+	color: #f0f0f0;
+}
+
+.win-screen {
+	background-color: #4D7455;
+	border: #3D6445 dashed 2px;
+}
+
+.loss-screen {
+	background-color: #AA0000;
+	border: #890000 dashed 2px;
 }
