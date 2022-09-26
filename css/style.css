@@ -3,7 +3,7 @@
 }
 
 body {
-	background-color: #f0f0f0;
+	background-color: #222;
 }
 
 #wrapper {
@@ -11,7 +11,7 @@ body {
 }
 
 button {
-	color: #eee;
+	color: #f0f0f0;
 	padding: 15px 32px;
 	margin: 5px 0;
 }
@@ -23,18 +23,18 @@ button:disabled {
 
 .header {
 	padding: 10px;
-	border: 5px dashed #222;
-	background-color: #d0d030;
+	background-color: #A50F79;
+	border: 5px solid #850f59;
 	margin: auto;
 	text-align: center;
 }
 
 .box {
-	background-color: #6592a0;
+	background-color: #476291;
+	border: 5px #274271 solid;
 	margin: 10px 0;
 	padding: 10px;
 	text-align: center;
-	border: 2px #222 dotted
 }
 
 .dice-box {
@@ -75,6 +75,7 @@ button:disabled {
 }
 
 .roll {
+	margin: 15px;
 	background-color: #ffd700;
 	border: 2px solid #dfb700;
 }
@@ -128,11 +129,12 @@ div.dice-state-6 {
 }
 
 .win-loss-screen {
-	background-color: #f0f0f0;
+	background-color: transparent;
 	border: none;
 }
 
 .win-screen, .loss-screen {
+	font-weight: bold;
 	padding: 10px;
 	text-align: center;
 	color: #f0f0f0;
@@ -140,10 +142,10 @@ div.dice-state-6 {
 
 .win-screen {
 	background-color: #4D7455;
-	border: #3D6445 dashed 2px;
+	border: #3D6445 solid 2px;
 }
 
 .loss-screen {
 	background-color: #AA0000;
-	border: #890000 dashed 2px;
+	border: #890000 solid 2px;
 }
