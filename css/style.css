@@ -101,7 +101,7 @@ button:disabled {
 	width: 64px;
 	height: 64px;
 	float: left;
-	background: url(/img/dice.png);
+	background: url(../img/dice.png);
 }
 
 div.dice-state-1 {
