@@ -54,9 +54,10 @@ const winning = () => {
 	Generates random number (used for the dice) using the Math object
 */
 
- const generateRandomNumber = () => {				
+const generateRandomNumber = () => {				
 	return Math.floor(Math.random() * 6) + 1;
 }
+
 /*
 	Adds funds to the bet in increments of 100
 */
@@ -65,6 +66,7 @@ const addFunds = () => {
 	currentFunds.innerHTML = playerFunds;
 	console.log(playerFunds);
 }
+
 /*
 	Removes funds from the bet in increments of 100
 	If-statement makes sure that you can't have a negative betting value
@@ -78,6 +80,7 @@ const decreaseFunds = () => {
 	currentFunds.innerHTML = playerFunds;
 	console.log(playerFunds)
 }
+
 /*
 	Simple function that doubles current bet for ease of use
 */
@@ -97,6 +100,7 @@ const updateFunds = () => {
 	console.log("player funds: " + playerFunds);
 	console.log("win/loss: " + houseFunds);
 }
+
 /*
 	Changes the computer dice sprites to be back to the "unknown state" when the player decides to roll the dice again
 */
