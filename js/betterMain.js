@@ -19,21 +19,24 @@ let playerTotal, computerTotal
 // FUNCTIONS HERE
 
 /*
-	Put these into functions for easier modification of the loss and win related
+	Put these into functions for easier modification of the loss and win 
+	related
 */
 const updateWinLossScreen = () => {
 	/*
-		Used to update the Win loss screen after a set amount of time defined in the losing/winning functions
+		Used to update the Win loss screen after a set amount of time defined 
+		in the losing/winning functions
 	*/
 	winLossScreen.innerHTML = null;
 	winLossScreen.classList.remove("loss-screen", "win-screen")
 }
 
 /*
-	Following functions display a loss or win screen based on the answer of the player.
-	Pops up a screen with "YOU WIN" or "YOU LOSE" for 3000ms and then removes it using the function above
+	Following functions display a loss or win screen based on the answer of the
+	player.
+	Pops up a screen with "YOU WIN" or "YOU LOSE" for 3000ms and then removes 
+	it using the function above
 */
-
 const losing = () => {
 	console.log("loser")
 	houseFunds -= playerFunds;
@@ -53,7 +56,6 @@ const winning = () => {
 /*
 	Generates random number (used for the dice) using the Math object
 */
-
 const generateRandomNumber = () => {				
 	return Math.floor(Math.random() * 6) + 1;
 }
@@ -91,7 +93,8 @@ const doubleFunds = () => {
 }
 
 /*
-	Updates current bet | needed to return betting value to 0 after the end of the round |
+	Updates current bet | needed to return betting value to 0 after the end of 
+	the round
 */
 const updateFunds = () => {
 	playerFunds = 0;
@@ -102,7 +105,8 @@ const updateFunds = () => {
 }
 
 /*
-	Changes the computer dice sprites to be back to the "unknown state" when the player decides to roll the dice again
+	Changes the computer dice sprites to be back to the "unknown state" when 
+	the player decides to roll the dice again
 */
 const hideDice = () => {
 	document.querySelectorAll(".computer-dice > div").forEach(
@@ -113,14 +117,16 @@ const hideDice = () => {
 }
 
 /*
-	Function used to "roll" the dice by use of the previous generateRandomNumber function
+	Function used to "roll" the dice by use of the previous 
+	generateRandomNumber function
 */
 const rollDice = () => {
 	playerTotal = 0;
 	computerTotal = 0;
 
 	/*
-	While loop functions as a failsafe to make sure that the player and computer cannot have the same total dice value
+		While loop functions as a failsafe to make sure that the player and 
+		computer cannot have the same total dice value
 	*/
 	while (playerTotal === computerTotal) {				
 		playerDice = [generateRandomNumber(), generateRandomNumber()]
@@ -131,7 +137,8 @@ const rollDice = () => {
 	}
 
 	/*
-		Changes the sprite of the dice based on the number rolled by changing the class of the object
+		Changes the sprite of the dice based on the number rolled by changing
+		the class of the object
 	*/
 	document.querySelectorAll(".player-dice > div").forEach(
 		(element, index) => {
@@ -144,7 +151,8 @@ const rollDice = () => {
 }
 
 /*
-	Changes the sprite of the dice based on the number rolled by changing the class of the element
+	Changes the sprite of the dice based on the number rolled by changing the 
+	class of the element
 */
 const revealDice = () => {
 	document.querySelectorAll(".computer-dice > div").forEach(
@@ -155,7 +163,8 @@ const revealDice = () => {
 }
 
 /*
-	Toggles all buttons to either enabled or disabled causing the player to be unable to change the betting value or the "re-roll" the dice
+	Toggles all buttons to either enabled or disabled causing the player to be
+	 unable to change the betting value or the "re-roll" the dice
 */
 const toggleButton = () => {
 	document.querySelectorAll("button").forEach(
